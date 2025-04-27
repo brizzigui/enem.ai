@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="./assets/loading.css">
+
+        <script src="./assets/script.js"></script>
+
+        <title>enem.ai</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato&display=swap" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="main_area">
+            <div class="title">
+                <h1>enem.ai</h1>
+                <h2>A IA feita para te ajudar a passar no ENEM.</h2>
+                <hr>
+            </div>
+
+            <div class="selection" id="selection">
+                <p>Para começar, selecione a matéria e o nível de dificuldade desejados. Deixe desmarcado para geração aleatória</p>
+                <script>create_selection();</script>
+                <br>
+                <hr>
+                <button class="generate_button" onclick="check_and_request();">Gerar</button>
+            </div>
+
+            <div class="generating" id="generating">
+                <p>Gerando nova questão</p>
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
+
+            <div class="content" id="content">
+                <p class="question_info">Temática: <span id="subject"></span></p>
+                <hr>
+                <p class="question_info">Enunciado</p>
+                <p id="question"></p>
+                <hr>
+                <p class="question_info">Alternativas</p>
+                <br>
+                <div class="option_container">
+                    <input type="radio" id="option1_in" name="option_selection" value="A" class="radio_option" />
+                    <label for="option1_in" class="option" id="option1">Option A</label>
+                </div>
+                <br>
+                <div class="option_container">
+                    <input type="radio" id="option2_in" name="option_selection" value="B" class="radio_option" />
+                    <label for="option2_in" class="option" id="option2">Option B</label>
+                </div>
+                <br>
+                <div class="option_container">
+                    <input type="radio" id="option3_in" name="option_selection" value="C" class="radio_option" />
+                    <label for="option3_in" class="option" id="option3">Option C</label>
+                </div>
+                <br>
+                <div class="option_container">
+                    <input type="radio" id="option4_in" name="option_selection" value="D" class="radio_option" />
+                    <label for="option4_in" class="option" id="option4">Option D</label>
+                </div>
+                <br>
+                <div class="option_container">
+                    <input type="radio" id="option5_in" name="option_selection" value="E" class="radio_option" />
+                    <label for="option5_in" class="option" id="option5">Option E</label>
+                </div>
+                <br>
+                <button class="generate_button centered" onclick="check_answer();">Responder</button>
+            </div>
+
+            <div class="content" id="answer_checking">
+                <div id="right_message">
+                    <h1>:)</h1>
+                    <p>Correto!</p>
+                </div>
+                <div id="wrong_message">
+                    <h1>:(</h1>
+                    <p>Errado!</p>
+                </div>
+                <p>A resposta é <span id="correct_option_space"></span>.</p>
+                <p>Justificativa da IA: <span id="ai_justification_space"></span></p>
+
+                <button class="generate_button centered" onclick="restart();">Continuar</button>
+                <br>
+                <p>A IA pode cometer erros. Verifique informações importantes.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,249 @@
+.main_area
+{
+    width: max(70vw, min(500px, 90vw));
+    min-height: 70vh;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    border: solid 1px rgb(226, 226, 226);
+    background-color: whitesmoke;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+h1
+{
+    margin: 0px;
+    font-family: "Arvo", serif;
+    color: #ff2b57;
+    font-size: 48px;
+    text-align: center;
+}
+
+h2
+{
+    margin: 0px;
+    font-family: "Lato", sans-serif;
+    color: #ff7a95;
+    font-size: 15px;
+    text-align: center;
+}
+
+hr
+{
+    height: 1px;
+    border: none;
+    background-color: #ff7a95;
+    color: #ff7a95;
+}
+
+p
+{
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+}
+
+.title
+{
+    margin: 15px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.generating
+{
+    text-align: center;
+    display: none;
+    visibility: hidden;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.selection
+{
+    text-align: center;
+}
+
+.radio-buttons 
+{
+    display: flex;
+    gap: 10px;
+}
+
+.radio_buttons input[type="radio"] 
+{
+    display: none;
+}
+
+.radio_buttons label 
+{
+    padding: 5px 10px;
+    margin: 3px;
+    border: 2px solid #ff7a95;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    background-color: white;
+    transition: background-color 0.2s, border-color 0.2s;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+  }
+
+.radio_buttons input[type="radio"]:checked + label 
+{
+    background-color: #ff2b57;
+    color: white;
+    border-color: #ff2b57;
+}
+
+.generate_button
+{
+    width: 150px;
+    height: 50px;
+    border: 3px solid #ff2b57;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    background-color: #ff2b57;
+    transition: all 0.3s ease;
+    color: white;
+
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    box-shadow: 0 0 3px #ff2b57aa, 0 0 3px #ff2b5755;
+
+    cursor: pointer;
+}   
+
+.generate_button:hover
+{
+    box-shadow: 0 0 10px #ff2b57aa, 0 0 10px #ff2b5755;
+}
+
+.generate_button:active
+{
+    box-shadow: 0 0 10px #ff2b57aa, 0 0 10px #ff2b5755;
+}
+
+.question_info
+{
+    font-family: "Arvo", serif;
+    color: #ff2b57;
+    font-size: 12px;
+}
+
+.content
+{
+    display: none;
+    visibility: hidden;
+}
+
+.option
+{
+    font-size: 13px;
+    font-family: "Lato", sans-serif;
+}
+
+.radio_option 
+{
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    vertical-align: middle;
+}
+    
+.radio_option:checked 
+{
+    border-color: #ff2b57; /* Indigo */
+    box-shadow: 0 0 0 4px #ff2b57aa;
+}
+  
+.radio_option::before 
+{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff2b57;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+  
+.radio_option:checked::before 
+{
+    transform: scale(1);
+}
+
+
+.option_container {
+    display: flex;                      
+    align-items: center;                
+    margin: 5px 5px;                      
+    cursor: pointer;                      
+    user-select: none;                   
+  }  
+
+  .radio_option {
+    position: absolute;                  
+    opacity: 0;                          
+    pointer-events: none;                 
+  }  
+  
+
+  .option {
+    position: relative;                   
+    padding-left: 2.5rem;                
+    font-size: 1rem;                    
+    color: #333;                         
+    transition: color 0.3s ease;        
+  }  
+  
+
+  .option::before {
+    content: "";                          
+    position: absolute;                    
+    left: 0;                             
+    top: 50%;                             
+    transform: translateY(-50%);         
+    width: 1.2rem;                      
+    height: 1.2rem;                      
+    border: 2px solid #ff2b57;            
+    border-radius: 50%;                  
+    transition: background 0.3s ease,       
+                box-shadow 0.3s ease;      
+  }  
+  
+  .option_container:hover .option::before {
+    box-shadow: 0 0 0 4px rgba(255,43,87,0.2);
+  }  
+  .option_container:hover .option {
+    color: #ff2b57;                    
+  }  
+  
+  .radio_option:checked + .option::before {
+    background: #ff2b57;                    
+  }  
+  
+.centered
+{
+    display: block;
+}
