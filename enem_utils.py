@@ -5,7 +5,7 @@ def get_area(subject: str) -> str:
         case "Matemática":
             return "Matemática e suas tecnologias"
         
-        case "Português" | "Inglês" | "Espanhol" | "Arte" | "Educação Física":
+        case "Português" | "Inglês" | "Espanhol" | "Arte" | "Educação Física" | "Literatura":
             return "Linguagens, códigos e suas tecnologias"
         
         case "Física" | "Química" | "Biologia":
@@ -17,7 +17,7 @@ def get_area(subject: str) -> str:
     return "any"
 
 def get_random_subject() -> str:
-    subjects = ["Matemática", "Português", "Inglês", "Espanhol", "Arte", "Educação Física",
+    subjects = ["Matemática", "Português", "Inglês", "Espanhol", "Arte", "Educação Física", "Literatura",
                 "Física", "Química", "Biologia", "História", "Geografia", "Filosofia", "Sociologia"]
     
     return subjects[random.randint(0, len(subjects)-1)]

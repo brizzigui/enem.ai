@@ -150,7 +150,7 @@ function create_selection()
     parent.innerHTML += "<div class='radio_buttons' id='subjects_selector'>";
     
     let container = document.getElementById("subjects_selector");
-    subjects = ["Matemática", "Português", "Inglês", "Espanhol", "Arte", "Educação Física", "Física", "Química", "Biologia", "História", "Geografia", "Filosofia", "Sociologia"];
+    subjects = ["Matemática", "Português", "Inglês", "Espanhol", "Arte", "Educação Física", "Literatura", "Física", "Química", "Biologia", "História", "Geografia", "Filosofia", "Sociologia"];
     for (let i = 0; i < subjects.length; i++) 
     {
         let radio = document.createElement("input");
